@@ -1,4 +1,4 @@
-var WebSocketServer = require('ws').server;
+var WebSocketServer = require('websocket').server;
 var http = require('http');
 
 //Porta que o server irá escutar  
