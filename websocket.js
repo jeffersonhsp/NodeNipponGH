@@ -2,10 +2,12 @@ var WebSocketServer = require('websocket').server;
 var http = require('http');
 
 //Porta que o server irá escutar  
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 //Cria o server
-var server = http.createServer();
+var server = http.createServer(function(req,res){
+    res.end("<h1> Ok </h1>")
+});
 
 //Server irá escutar na porta definida em 'port'
 server.listen(port, () => {
