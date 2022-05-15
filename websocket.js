@@ -41,7 +41,7 @@ wsServer.on('request', (request) => {
         client.sendUTF(state? "ON" : "OFF");
         //Inverte o estado
         state = !state;
-    }, 2000);//Tempo entre chamadas => 1000 millis = 1 segundo 
+    }, 3000);//Tempo entre chamadas => 1000 millis = 1 segundo 
 
     //Chamado quando a conexão com o client é fechada
     client.on('close', () => {
