@@ -17,12 +17,12 @@ server.listen(port, () => {
 });
 
 //Cria o WebSocket server
-wsServer = new WebSocketServer({
+wssServer = new WebSocketServer({
   httpServer: server
 });
 
 //Chamado quando um client deseja conectar
-wsServer.on('request', (request) => {
+wssServer.on('request', (request) => {
     //Estado do led: false para desligado e true para ligado
     let state = false;
 
