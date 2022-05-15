@@ -6,7 +6,8 @@ const port = process.env.PORT || 8080;
 
 //Cria o server
 var server = http.createServer(function(req,res){
-    res.end("<h1> Ok </h1>")
+    //res.end('<h1> Ok </h1> ${port}')
+    res.end(`Server está executando na porta ${port}`);
 });
 
 //Server irá escutar na porta definida em 'port'
