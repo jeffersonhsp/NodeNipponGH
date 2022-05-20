@@ -40,7 +40,7 @@ wsServer.on('request', (request) => {
     //Cria uma função que será executada a cada 1 segundo (1000 millis) para enviar o estado do led
     let interval = setInterval(() => {
         //Envia para o client "ON" ou "OFF" dependendo do estado atual da variável state
-        client.sendUTF(state? "ON" : "OFF");
+        client.sendUTF(state? "{'output1':'ON'}" : "{'output1':'OFF'}");
         //Inverte o estado
         state = !state;
     }, 100);//Tempo entre chamadas => 1000 millis = 1 segundo 
